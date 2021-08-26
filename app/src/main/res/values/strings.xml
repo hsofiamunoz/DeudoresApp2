@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DeudoresApp2</string>
+    <string name="title_list">Lista</string>
+    <string name="title_create">Crear</string>
+    <string name="title_read">Leer</string>
+    <string name="title_update">Actualizar</string>
+    <string name="title_delete">Eliminar</string>
+    <string name="name_hint">Digite el nombre</string>
+    <string name="phone_hint">Digite el número</string>
+    <string name="amount_hint">Digite el valor</string>
+    <string name="create">crear</string>
+    <string name="name_example">Carlos Mario Lopez</string>
+    <string name="amount_example">120000</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_detail">Detalle</string>
+    <string name="buscar_hint">Buscar</string>
+    <string name="phonre_example">3104110460</string>
+    <string name="phone_value">Teléfono: %s</string>
+    <string name="amount_value">Valor de la deuda: %s</string>
+    <string name="accept">Aceptar</string>
+    <string name="negative">Cancelar</string>
+</resources>
