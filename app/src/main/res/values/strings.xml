@@ -22,4 +22,8 @@
     <string name="negative">Cancelar</string>
     <string name="login_title">Iniciar sesión</string>
     <string name="register_title">Regístrate!</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="repeat_password_hint">Repetir contraseña</string >
+    <string name="register_button_hint">Registrarse</string>
 </resources>
