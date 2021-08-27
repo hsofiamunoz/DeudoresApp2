@@ -20,4 +20,6 @@
     <string name="amount_value">Valor de la deuda: %s</string>
     <string name="accept">Aceptar</string>
     <string name="negative">Cancelar</string>
+    <string name="login_title">Iniciar sesión</string>
+    <string name="register_title">Regístrate!</string>
 </resources>
