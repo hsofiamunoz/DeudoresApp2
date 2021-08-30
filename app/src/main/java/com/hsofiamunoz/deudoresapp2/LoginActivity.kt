@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.hsofiamunoz.deudoresapp2.data.dao.DebtorDao
 import com.hsofiamunoz.deudoresapp2.data.dao.UserDao
 import com.hsofiamunoz.deudoresapp2.data.entities.Debtor
+import com.hsofiamunoz.deudoresapp2.data.entities.User
 import com.hsofiamunoz.deudoresapp2.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -21,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(loginBinding.root)
 
-        val data = intent.extras
 
         loginBinding.loginButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -31,8 +31,7 @@ class LoginActivity : AppCompatActivity() {
             val password = loginBinding.passwordTextInput.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()){
-                  searchUser(loginBinding.email1TextInput.text.toString(),
-                  loginBinding.passwordTextInput.text.toString())
+                  searchUser(email,password)
             }
             else
                 Toast.makeText(this,getString(R.string.missing_parameters), Toast.LENGTH_SHORT).show()
@@ -44,12 +43,33 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
     }
 
     private fun searchUser( email: String, password: String){
         // se carga el Dao
+        val userDao : UserDao = DeudoresApp2.databaseuser.UserDao()
+        // Crea el usuario
+        val user: User = userDao.loginUser(email)
 
+        if(user != null){
+            if(email == user.email)
+            {
+                if(password == user.password)
+                {
+                    val intent = Intent(this,MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    startActivity(intent)
+                    }
+                else
+                    Toast.makeText(this,"Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                    Toast.makeText(this,"Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                }
+        }
+        else{
+            Toast.makeText(this,"Ingresar parámetros correctos", Toast.LENGTH_SHORT).show()
+        }
 
     }
 }

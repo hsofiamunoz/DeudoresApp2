@@ -14,5 +14,4 @@ interface UserDao {
     @Query("SELECT * FROM table_user WHERE email LIKE :email")
     fun loginUser(email:String) : User
 
-
 }

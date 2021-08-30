@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DeudoresApp2</string>
+    <string name="app_name">Deudores</string>
     <string name="title_list">Lista</string>
     <string name="title_create">Crear</string>
     <string name="title_read">Leer</string>
@@ -8,7 +8,7 @@
     <string name="name_hint">Digite el nombre</string>
     <string name="phone_hint">Digite el número</string>
     <string name="amount_hint">Digite el valor</string>
-    <string name="create">crear</string>
+    <string name="create">CREAR</string>
     <string name="name_example">Carlos Mario Lopez</string>
     <string name="amount_example">120000</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -38,4 +38,5 @@
     <string name="register_text_link1">registro</string>
     <string name="register">Registrate aquí</string>
     <string name="logologin">img_login</string>
+    <string name="logout">Cerrar sesión</string>
 </resources>
